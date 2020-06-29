@@ -1,0 +1,107 @@
+<html>
+    <h5 class="textColorLight">You have 60 seconds to accept this Contract Price</h5><br>
+<form [formGroup]="acceptForm" (ngSubmit)='acceptHandler()'>
+    <h4>Contract Information</h4>
+
+    
+    <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Product: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='contract_type'>
+        </div>
+  
+      </div>  
+
+     
+        <div class="col form-check form-check-inline">
+          <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Amount:: </label>
+          
+          <div class="col-sm-2 col-form-label textColorBold">
+            <input type="text" readonly class="form-control-plaintext" formControlName='contract_amount'>
+          </div>
+    
+        </div>  
+      
+        <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Expiration Date: </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <input type="text" readonly class="form-control-plaintext" formControlName='Date_time'>
+            </div>
+      
+          </div>  
+
+          <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Interest Rate: </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <input type="text" ng-readonly="all" class="form-control-plaintext" formControlName='Interest_Rate'>
+            </div>
+      
+          </div>  
+
+          <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Price: </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <input type="text" ng-readonly="all" class="form-control-plaintext" formControlName='contract_price'>
+            </div>
+      
+          </div>
+          
+          <h6 class="red-text"> Time Remaining to accept this contract: {{timeLeft}} secs</h6><br><br>
+          <button type="submit" class="btn btn-primary col-sm-2 col-form-label backgroundColor">ACCEPT</button>
+        
+          <button type="submit" (ngsubmit)='cancelHandler()' class="btn btn-primary col-sm-2 col-form-label backgroundColorwhite">REJECT</button> 
+
+          <button type="button" ng-model="all" class="btn btn-primary col-sm-2 col-form-label backgroundColorwhite">ADJUST PRICE</button>  
+        </form>
+
+          <table class="table">
+            <thead>
+              <tr class="textColorBold">
+                <th scope="col">ADJUSTMENTS TO PRICE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" >Interest Rate</th>
+                <td>3.500%</td>
+                <td>3.625%</td>
+                <td>3.750%</td>
+                <td>3.875%</td>
+                <td>4.000%</td>
+                <td>4.250%</td>
+                <td>4.375%</td>
+                <td>4.500%</td>
+              </tr>
+
+              <tr>
+                <th scope="row" >Adjusted Price</th>
+                <td>105.803</td>
+                <td>105.935</td>
+                <td>106.068</td>
+                <td>106.200</td>
+                <td>106.332</td>
+                <td>106.465</td>
+                <td>106.600</td>
+                <td>106.733</td>
+              </tr>
+
+              <tr>
+                <th scope="row" >Price Adjustment</th>
+                <td>(0.529%)</td>
+                <td>(0.397%)</td>
+                <td>(0.264%)</td>
+                <td>(0.132%)</td>
+                <td>(0.000%)</td>
+                <td>(0.133%)</td>
+                <td>(0.268%)</td>
+                <td>(0.401%)</td>
+              </tr>
+              </tbody>
+              </table>
+
+
+</html>

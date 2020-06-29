@@ -1,0 +1,277 @@
+<html>
+<form [formGroup]="createForm" (ngSubmit)='createHandler()' class="was-validated">
+    <h4>Contract Information</h4>
+    <div class="col form-check form-check-inline">
+      <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Master Commitment: </label>
+      
+      <div class="col-sm-2 col-form-label textColorBold">
+        <select class="custom-select custom-select-sm" formControlName='master_commitment' required>
+            <option selected>NONE</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+      </div>
+
+    </div>
+
+    <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Index Source Type: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <select class="custom-select custom-select-sm" formControlName='source_type' required>
+              <option selected>All</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+        </div>
+  
+      </div>
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Product: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <select class="custom-select custom-select-sm" formControlName='contract_product' required>
+              <option selected value="5/1 1-Year LIBOR ARM 2/2/5 or 6">5/1 1-Year LIBOR ARM 2/2/5 or 6</option>
+              <option value="5/2 1-Year LIBOR ARM 2/2/5 or 6">5/2 1-Year LIBOR ARM 2/2/5 or 6</option>
+              <option value="5/3 1-Year LIBOR ARM 2/2/5 or 6">5/3 1-Year LIBOR ARM 2/2/5 or 6</option>
+              <option value="5/4 1-Year LIBOR ARM 2/2/5 or 6">5/4 1-Year LIBOR ARM 2/2/5 or 6</option>
+            </select>
+        </div>
+  
+      </div>
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Amount: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <select class="custom-select custom-select-sm" formControlName='contract_amount' required>
+              <option selected value="$1,000,000.00">$1,000,000.00</option>
+              <option value="$2,000,000.00">$2,000,000.00</option>
+              <option value="$3,000,000.00">$3,000,000.00</option>
+              <option value="$4,000,000.00">$4,000,000.00</option>
+            </select>
+        </div>
+  
+      </div>
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Name: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input class="form-check-input" value="test" formControlName='contract_name' required>
+        </div>
+  
+      </div>    
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Period: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input class="form-check-input" value="45" formControlName='contract_period' required>
+        </div>
+  
+      </div>    
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Convertible Indicator: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+        false
+        </div>
+  
+      </div>    
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Assumibality Indicator: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+        true
+        </div>
+  
+      </div>     
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Assumibility Type: </label>
+        
+        <div class="col-sm-2 col-form-label" >
+        Assumable After First Rate Change Date, Assumable For Life Of Loan
+        </div>
+  
+      </div>     
+    
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Effective Date and Time: </label>
+        
+
+        <div class="col-sm-2 col-form-label textColorBold">
+            <input type="datetime-local" class="form-check-input" formControlName='Date_time' required>
+          </div>
+  
+      </div><br><br>
+      
+      <h4>Contract Disposition</h4>
+
+          <div class="form-row">
+          <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Disposition Type: </label>
+          
+          <div class="col form-check form-check-inline">
+            <input class="form-check-input" type="radio" formControlName='Disposition_type' id="inlineRadio2" value="Hold in Portfolio">
+            <label class="form-check-label" for="inlineRadio2">Hold in Portfolio</label>
+          </div>
+          <div class="col form-check form-check-inline">
+            <input class="form-check-input" type="radio" formControlName='Disposition_type' id="inlineRadio2" value="Sell as PC">
+            <label class="form-check-label" for="inlineRadio2">Sell as PC</label>
+          </div>
+    
+        </div>
+        <br>
+
+          
+            <div class="form-row ">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Path: </label>
+            
+            <div class="col form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName='Contract_Path' id="inlineRadio4" value="Generic">
+              <label class="form-check-label" for="inlineRadio2">Generic</label>
+            </div>
+            <div class="col form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName='Contract_Path' id="inlineRadio4" value="Specified">
+              <label class="form-check-label" for="inlineRadio2">Specified</label>
+            </div>
+      
+          
+          </div>
+          <br>
+
+        <h4>Contract Weighted Averages</h4>
+        <p>Enter gross values, not net of servicing fee</p>
+    
+        <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Interest Rate: </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <input type="number" class ="form-check-input" value="4" formControlName='Interest_Rate' required>%
+            </div>
+      
+          </div>    
+          <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Gross Margin: </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <input class="form-check-input" value="2" formControlName='Gross_Margin' required>2.000%-2.875%
+            </div>
+      
+          </div>    
+          <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Servicing Fee During Fixed Period: </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <input class="form-check-input" value="0.25" formControlName='Servicing_Fee' required>0.25%-0.375%
+            </div>
+      
+          </div>    
+          <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">First Per Change Maximum Increase Rate Percent: </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <input class="form-check-input" value="2" formControlName='First_Increase_Rate_Percent' required >2%
+            </div>
+      
+          </div>    
+          <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Subsequent Per Change Maximum Increase Rate Percent: </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <input class="form-check-input" value="2" formControlName='Subsequent_Increase_Rate_Percent' required>2%
+            </div>
+      
+          </div>    
+          <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Life Of Loan Rate Cap Percent </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <input class="form-check-input" value="5" formControlName='Life_Of_Loan' required>5%-6%
+            </div>
+      
+          </div>    
+          <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Number Of Months to Next Payment Adjustment: </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <input class="form-check-input" value="60" formControlName='No_Of_Months_Next_Adjustment' required> 54-66 Months
+            </div>
+      
+          </div>    
+
+          <br><br>
+
+          <h4>Servicing Retained Information</h4>
+
+          <div class="col form-check form-check-inline">
+          <label for="inlineRadioOptions3" class="col-sm-2 col-form-label textColorBold">Servicing Option: </label>
+          
+          <div class="col form-check form-check-inline">
+            <input class="form-check-input" type="radio" formControlName='Servicing_Option' id="inlineRadio3" value="Retained">
+            <label class="form-check-label" for="inlineRadio3">Retained</label>
+          </div>
+          <div class="col form-check form-check-inline">
+            <input class="form-check-input" type="radio" formControlName='Servicing_Option' id="inlineRadio3" value="CTOS">
+            <label class="form-check-label" for="inlineRadio3">CTOS</label>
+          </div>
+    
+        </div>
+        <br>
+
+        <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Interest/ Principal Remittance Type: </label>
+            
+            <div class="col form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName='Interest_Type' id="inlineRadio2" value="Scheduled/Actual">
+              <label class="form-check-label" for="inlineRadio2">Scheduled/Actual</label>
+            </div>
+        </div>
+        <div class="col form-check form-check-inline">
+                <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">PREPAYMENT REMITTANCE DUE DAYS: </label>
+                
+                <div class="col-sm-2 col-form-label textColorBold" >
+                5 days
+                </div>
+        </div>
+
+        <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Designated Service #: </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <select class="custom-select custom-select-sm" formControlName='Designated_Service_No'>
+                  <option selected value="147357 Guaranteed Rate">147357 Guaranteed Rate</option>
+                  <option value="147358 Guaranteed Rate">147358 Guaranteed Rate</option>
+                  <option value="147350 Guaranteed Rate">147350 Guaranteed Rate</option>
+                  <option value="147351 Guaranteed Rate">147351 Guaranteed Rate</option>
+                </select>
+            </div>
+      
+          </div>
+
+          <div class="col form-check form-check-inline">
+            <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Remittance Option: </label>
+            
+            <div class="col-sm-2 col-form-label textColorBold">
+              <select class="custom-select custom-select-sm" formControlName='Remittance_Option'>
+                  <option selected value="Standard">Standard</option>
+                  <option value="Variable">Variable</option>
+                  
+                </select>
+            </div>
+      
+          </div>
+          
+       <br><br>            
+    <button type="submit"  class="btn btn-primary col-sm-2 col-form-label backgroundColor">SAVE AND CONTINUE</button>
+   
+    <button type="submit" (ngsubmit)='cancelHandler()' class="btn btn-primary col-sm-2 col-form-label backgroundColorwhite">CANCEL</button>  
+  </form>
+  <br><br>
+  </html>

@@ -1,0 +1,76 @@
+
+<html>
+    <h5 class="textColorLight">Select the parameters below to create a contract</h5><br>
+<form [formGroup]="contentForm"  (ngSubmit)='addContentHandler()'>
+    <h4>Create New Contract</h4>
+    <div class="form-row">
+      <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Option: </label>
+      
+      <div class="col form-check form-check-inline">
+        <input class="form-check-input"   type="radio" id="inlineRadio1" formControlName='contract_option' value="Mandatory" required>
+        
+        <label class="form-check-label" for="inlineRadio1">Mandatory</label>
+        <div class="sub2">
+          <div>
+              <input type="radio"  formControlName='mandatory_sub_option' value="Fixed" />
+              <label for="D10">Fixed</label>
+             
+          </div>
+          <div>
+              <input type="radio" formControlName='mandatory_sub_option' value="ARM" />
+              <label for="D11">ARM</label>
+          </div>
+      </div>
+      </div>
+      <div class="col form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName='contract_option' value="Best Efforts(Fixed Only)">
+        <label class="form-check-label" for="inlineRadio1">Best Efforts(Fixed Only)</label>
+      </div>
+
+    </div>
+    
+    
+
+          <div class="form-row">
+          <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Servicing Option: </label>
+          
+          <div class="col form-check form-check-inline">
+            <input class="form-check-input"  type="radio" formControlName='Servicing_Option' value="Released(Fixed Only)" required>
+            <div *ngIf="contentForm.get('Servicing_Option').errors?.required">Seller Loan Identifier is required</div>
+            <label class="form-check-label" for="inlineRadio2">Released(Fixed Only)</label>
+          </div>
+          <div class="col form-check form-check-inline">
+            <input class="form-check-input" type="radio" formControlName='Servicing_Option' value="Retained">
+            <label class="form-check-label" for="inlineRadio2">Retained</label>
+          </div>
+          <div class="col form-check form-check-inline">
+            <input class="form-check-input" type="radio" formControlName='Servicing_Option' value="CTOS">
+            <label class="form-check-label" for="inlineRadio2">CTOS</label>
+          </div>
+    
+        </div>
+        <br>
+
+        <h4>Create New Loan For Best Efforts Contract</h4>
+        <p>For loans in the system, enter either the Seller Loan Identifier and/or the Primary Borrower's Last Name.</p>
+    
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label textColorBold">Seller Loan Identifier:</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control"  placeholder="Enter Identifier#" formControlName='loan_identifier' required>
+              <div *ngIf="contentForm.get('loan_identifier').errors?.required">Seller Loan Identifier is required</div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label textColorBold">Primary Borrower Last Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" 
+              placeholder="Enter Name" formControlName='last_name'/>  
+              <div *ngIf="contentForm.get('last_name').errors?.required">Last name is required</div>
+            </div>
+          </div>
+          <a href="#"> Enhanced Relief Refinance Mortgages</a>
+          <br><br>
+    <button type="submit" class="btn btn-primary backgroundColor">CREATE CONTRACT</button>
+  </form>
+  </html>

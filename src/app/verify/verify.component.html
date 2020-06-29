@@ -1,0 +1,207 @@
+<html>
+    <h5 class="textColorLight">Verify the entries and ranges below before pricing the contracts</h5><br>
+<form [formGroup]="verifyForm" (ngSubmit)='verifyHandler()'>
+    <h4>Contract Information</h4>
+        
+        
+    <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Name: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='contract_name'>
+        </div>
+  
+      </div>    
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Investor Contract Identifier: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='loan_identifier'>
+        </div>
+  
+      </div>  
+        
+       
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Type: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='contract_type'>
+        </div>
+  
+      </div>  
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Product: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='contract_product'>
+        </div>
+  
+      </div>  
+      
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Master Commitment: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='master_commitment'>
+        </div>
+  
+      </div>  
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Convertible Indicator: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='Convertible_Indicator'>
+        </div>
+  
+      </div>  
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Assumibility Indicator: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='Assumability_Indicator'>
+        </div>
+  
+       
+
+
+    </div>
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Amount:: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='contract_amount'>
+        </div>
+  
+      </div>  
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Contract Period: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='contract_period'>
+        </div>
+  
+      </div>  
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Expiration Date: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='Date_time'>
+        </div>
+  
+      </div>  
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Servicing Option: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='Servicing_Option'>
+        </div>
+  
+      </div>  
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Designated Service #: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='Designated_Service_No'>
+        </div>
+  
+      </div>  
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Remittance Option: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='Remittance_Option'>
+        </div>
+  
+      </div> 
+
+      <div class="col form-check form-check-inline">
+        <label for="inlineRadioOptions" class="col-sm-2 col-form-label textColorBold">Prepayment Remittance Due Date: </label>
+        
+        <div class="col-sm-2 col-form-label textColorBold">
+          <input type="text" readonly class="form-control-plaintext" formControlName='REMITTANCE_DUE_DAYS'>
+        </div>
+  
+      
+    
+</div>
+
+<table class="table">
+  <thead>
+    <tr class="textColorBold">
+      <th scope="col"> </th>
+      <th scope="col">WEIGHTED AVERAGE</th>
+      <th scope="col">MIN</th>
+      <th scope="col">MAX</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" >Contract Interest Rate</th>
+      <td><input type="text" readonly class="form-control-plaintext" formControlName='Interest_Rate'></td>
+      <td>3.750%</td>
+      <td>4.250%</td>
+    </tr>
+
+    <tr>
+      <th scope="row" >Contract Gross Margin</th>
+      <td><input type="text" readonly class="form-control-plaintext" formControlName='Gross_Margin'></td>
+      <td>2.000%</td>
+      <td>2.750%</td>
+    </tr>
+
+    <tr>
+      <th scope="row" >Servicing Fee</th>
+      <td><input type="text" readonly class="form-control-plaintext" formControlName='Servicing_Fee'></td>
+      <td>0.250%</td>
+      <td>0.250%</td>
+    </tr>
+
+    <tr>
+      <th scope="row" >First Increase Rate Percent</th>
+      <td><input type="text" readonly class="form-control-plaintext" formControlName='First_Increase_Rate_Percent'></td>
+      <td>2.000%</td>
+      <td>2.000%</td>
+    </tr>
+
+    <tr>
+      <th scope="row" >Subsequent Increase Rate Percent</th>
+      <td><input type="text" readonly class="form-control-plaintext" formControlName='Subsequent_Increase_Rate_Percent'></td>
+      <td>2.000%</td>
+      <td>2.000%</td>
+    </tr>
+
+    <tr>
+      <th scope="row" >Life Of Loan</th>
+      <td><input type="text" readonly class="form-control-plaintext" formControlName='Life_Of_Loan'></td>
+      <td>5.000%</td>
+      <td>5.000%</td>
+    </tr>
+
+    <tr>
+      <th scope="row" >No Of Months Next Adjustment</th>
+      <td><input type="text" readonly class="form-control-plaintext" formControlName='No_Of_Months_Next_Adjustment'></td>
+      <td>58</td>
+      <td>62</td>
+    </tr>
+    </tbody>
+    </table>
+
+<button type="submit" class="btn btn-primary col-sm-2 col-form-label backgroundColor">PRICE CONTRACT</button>
+   
+<button type="submit" (ngsubmit)='cancelHandler()' class="btn btn-primary col-sm-2 col-form-label backgroundColorwhite">CANCEL</button>  
+
+</form>
+
+<a routerLink="/create"> Change Contracting Terms</a>
+</html>
